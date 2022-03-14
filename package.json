@@ -10,11 +10,7 @@
     "editor",
     "code"
   ],
-  "author": {
-    "name": "Marijn Haverbeke",
-    "email": "marijnh@gmail.com",
-    "url": "http://marijnhaverbeke.nl"
-  },
+  "author": "Marijn Haverbeke <marijnh@gmail.com> (http://marijnhaverbeke.nl)",
   "type": "module",
   "main": "dist/index.cjs",
   "exports": {
@@ -39,6 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codemirror/lint.git"
-  }
+    "url": "git+https://github.com/codemirror/lint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codemirror/lint/issues"
+  },
+  "homepage": "https://github.com/codemirror/lint#readme"
 }
