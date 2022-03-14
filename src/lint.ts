@@ -301,16 +301,19 @@ export function forceLinting(view: EditorView) {
 
 function assignKeys(actions: readonly Action[] | undefined) {
   let assigned: string[] = []
-  if (actions) actions: for (let {name} of actions) {
-    for (let i = 0; i < name.length; i++) {
-      let ch = name[i]
-      if (/[a-zA-Z]/.test(ch) && !assigned.some(c => c.toLowerCase() == ch.toLowerCase())) {
-        assigned.push(ch)
-        continue actions
-      }
-    }
-    assigned.push("")
-  }
+  if (actions) 
+  actions: for(let i=0;i< actions.length;i++){
+            const {name} =actions[i]
+            
+            for (let i = 0; i < name.length; i++) {
+                let ch = name[i];
+                if (/[a-zA-Z]/.test(ch) && !assigned.some(c => c.toLowerCase() == ch.toLowerCase())) {
+                    assigned.push(ch);
+                    continue actions;
+                }
+            }
+            assigned.push("");
+        }
   return assigned
 }
 
